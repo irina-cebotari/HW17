@@ -15,6 +15,20 @@ const [countX] = closure()
 
 countX()
 
+const closure = () => {
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+    function showArr() {
+        return arr;
+    }
+    return [showArr];
+}
+
+const [showArr] = closure()
+
+console.log(showArr())
+
+
 
 
 // ex1.2
@@ -41,7 +55,7 @@ const closure = () => {
     const initialArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
     function oddValues() {
-       return initialArr.filter(item => item % 2)
+       return initialArr.filter(item => item % 2 !== 0)
     }
 
     return [oddValues];
@@ -92,6 +106,22 @@ const closure = () => {
 const [newValue] = closure()
 
 console.log(newValue())
+
+
+const closure = () => {
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    
+    function addNumber(num) {
+       if(typeof num !== 'number' && num.isNaN()) return;
+
+       arr.push(num);
+}
+}
+
+const [addNumber] = closure()
+
+addNumber(showArr().length+1)
+console.log(showArr())
 
 
 
